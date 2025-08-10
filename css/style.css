@@ -130,7 +130,7 @@ td:nth-child(4) {
 /* 数量/選択列（1列目）は文字幅に合わせる */
 td:nth-child(1),
 th:nth-child(1) {
-  width: 5%; !important
+  width: 5% !important;
   white-space: nowrap;
 }
 
