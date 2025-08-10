@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メカニック金額自動合計</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="container">
+    <h1><span>メカニック料金計算</span></h1>
+
+    <div class="table-wrapper">
+        <form id="priceForm">
+            <table>
+                <thead>
+                    <tr>
+                        <th>数量/選択</th>
+                        <th>項目</th>
+                        <th>単価(万)</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- カスタマイズ -->
+                    <tr>
+                        <td><input type="checkbox" class="price" data-price="200"></td>
+                        <td>ターボ</td>
+                        <td>200</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="price" data-price="200"></td>
+                        <td>アーマー</td>
+                        <td>200</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" value="0" class="qty" data-price="25"></td>
+                        <td>サス・ミッション・ブレーキ</td>
+                        <td>25</td>
+                        <td>1レベルごと</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" value="0" class="qty" data-price="10"></td>
+                        <td>パーツ変更</td>
+                        <td>10</td>
+                        <td>1カ所ごと</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="price" data-price="100"></td>
+                        <td>ニトロ（初回）</td>
+                        <td>100</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" value="0" class="qty" data-price="50"></td>
+                        <td>ニトロ補充</td>
+                        <td>50</td>
+                        <td>回数分</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="price" data-price="50"></td>
+                        <td>カラー変更</td>
+                        <td>50</td>
+                        <td>最低料金＋依頼料</td>
+                    </tr>
+
+                    <!-- 修理 -->
+                    <tr>
+                        <td><input type="number" min="0" value="0" class="qty repair-normal" data-price="10"></td>
+                        <td>修理（通常）</td>
+                        <td>10</td>
+                        <td>1カ所ごと（タイヤ4つで1カ所）</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" value="0" class="qty repair-discount" data-price="5"></td>
+                        <td>修理（初週割引）</td>
+                        <td>5</td>
+                        <td>1カ所ごと（タイヤ4つで1カ所）</td>
+                    </tr>
+
+                    <!-- 出張代 -->
+                    <tr>
+                        <td>
+                            <select class="price-select">
+                                <option value="0">選択してください</option>
+                                <option value="20">近郊 20万</option>
+                                <option value="30">近郊 30万</option>
+                                <option value="40">近郊 40万</option>
+                                <option value="40">遠方 40万</option>
+                                <option value="50">遠方 50万</option>
+                                <option value="60">遠方 60万</option>
+                                <option value="70">遠方 70万</option>
+                            </select>
+                        </td>
+                        <td>出張代</td>
+                        <td>-</td>
+                        <td></td>
+                    </tr>
+
+                    <!-- その他 -->
+                    <tr>
+                        <td><input type="number" min="0" value="0" class="qty" data-price="5"></td>
+                        <td>ダクトテープ</td>
+                        <td>5</td>
+                        <td>1つあたり</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" value="0" class="qty" data-price="50"></td>
+                        <td>ステッカー</td>
+                        <td>50</td>
+                        <td>1枚あたり</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <div class="totals">
+        <p>合計金額: <span id="total">0</span> 万円</p>
+        <p>請求金額: <span id="multiplied">0</span> 円</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
