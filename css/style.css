@@ -134,7 +134,7 @@ th:nth-child(1) {
   white-space: nowrap;
 }
 
-/* 数字入力欄スタイル */
+/* 数字入力欄スタイル（数量） */
 input.qty {
   width: 60px;
   padding: 4px 8px;
@@ -196,8 +196,19 @@ footer {
   color: #4b4f43;
 }
 
-/* レスポンシブ対応 */
+/* ----------------------
+   レスポンシブ対応
+---------------------- */
+
+/* タブレットサイズ以下 */
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .totals span {
+    font-size: 1.3rem;
+  }
 
   table,
   th,
@@ -205,23 +216,93 @@ footer {
     font-size: 0.9rem;
   }
 
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .totals span {
-    font-size: 1.3rem;
-  }
-
-  h1 span {
-    padding: 0.3em 0.5em;
-  }
-
   .table-wrapper {
     max-height: 60vh;
   }
 
+  h1 span {
+    padding: 0.3em 0.6em;
+  }
+
   .sp_br {
     display: none;
+  }
+
+  /* 数量入力欄 */
+  input.qty {
+    width: 50px;
+    font-size: 0.95rem;
+    padding: 3px 6px;
+  }
+}
+
+/* スマホ縦向きサイズ以下 */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    padding: 0 6px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 0.85rem;
+    padding: 8px 6px;
+  }
+
+  /* 数量入力欄 */
+  input.qty {
+    width: 42px;
+    font-size: 0.85rem;
+    padding: 2px 5px;
+  }
+
+  select.price-select {
+    width: 100px;
+    font-size: 0.9rem;
+    background-position: right 8px center;
+  }
+
+  .totals {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .totals span {
+    font-size: 1.2rem;
+  }
+}
+
+/* 超小型端末（320px以下） */
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+
+  /* 数量入力欄 */
+  input.qty {
+    width: 36px;
+    font-size: 0.8rem;
+    padding: 2px 4px;
+  }
+
+  select.price-select {
+    width: 90px;
+    padding: 5px 8px;
   }
 }
