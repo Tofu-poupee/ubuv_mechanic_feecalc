@@ -169,7 +169,7 @@ th:nth-child(1) {
 
 /* 数量入力欄 */
 input.qty {
-  width: 60px;
+  width: 70px;
   padding: 2px 4px;
   font-size: 1rem;
   border: 1px solid #6b7a56;
@@ -299,7 +299,7 @@ footer {
 
   /* 数量入力欄 */
   input.qty {
-    width: 42px;
+    width: 55px;
     font-size: 0.85rem;
     padding: 2px 3px;
   }
@@ -332,3 +332,4 @@ footer {
     font-size: 1.15rem;
   }
 }
+
